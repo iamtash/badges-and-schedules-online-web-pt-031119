@@ -3,10 +3,7 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  badge_messages = []
-  attendees.collect do |name|
-    badge_maker(name)
-  end
+  attendees.collect {|name| badge_maker(name)}
 end
 
 def assign_rooms(attendees)
